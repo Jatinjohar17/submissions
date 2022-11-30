@@ -5,6 +5,7 @@ $name=$_GET["name"];
 $mob=$_GET["mob"];
 $pwd=$_GET["pwd"];
 $email=$_GET["email"];
+$pwd = md5($pwd);
 
 $query="insert into customers (name,mob,pwd,email) values('$name','$mob','$pwd','$email')";
 $table=mysqli_query($dbcon,$query);
